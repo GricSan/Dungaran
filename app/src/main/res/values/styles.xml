@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  Main Menu Screen styles  -->
+    <style name="MainMenuScreenButton" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">144dp</item>
+        <item name="android:background">@color/purple_200</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>
