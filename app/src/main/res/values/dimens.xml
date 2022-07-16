@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  Application-wide dimensions  -->
+    <dimen name="application_screen_container_padding">24dp</dimen>
+    <dimen name="application_card_element_elevation">2dp</dimen>
+    <dimen name="application_card_element_corner_radius">4dp</dimen>
+
+</resources>

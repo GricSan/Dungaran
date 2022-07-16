@@ -3,9 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="24dp"
+    style="@style/ScreenRootContainer"
     tools:context=".modules.mainmenu.ui.MainMenuScreen">
 
     <TextView
@@ -24,6 +22,7 @@
         style="@style/MainMenuScreenButton"
         android:layout_marginBottom="16dp"
         android:text="Continue Campaign"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/btn_start_new_campaign"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -39,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="® Intellectual property of GricSan Inc."
+        android:text="Intellectual property of GricSan Inc. ®"
         android:textSize="8sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

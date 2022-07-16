@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import org.gricsan.dungaran.databinding.FragmentMainMenuScreenBinding
+import org.gricsan.dungaran.navigation.navigateTo
 
 class MainMenuScreen : Fragment() {
 
@@ -44,10 +45,11 @@ class MainMenuScreen : Fragment() {
     private fun setupClickListeners() {
         binding.run {
             btnContinueCampaign.setOnClickListener {
-
+                TODO("Not implemented yet!")
             }
             btnStartNewCampaign.setOnClickListener {
-
+                val directions = MainMenuScreenDirections.actionMainMenuScreenToCharacterCreationScreen()
+                navigateTo(directions)
             }
         }
     }

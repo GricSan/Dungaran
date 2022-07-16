@@ -9,6 +9,18 @@
         android:id="@+id/main_menu_screen"
         android:name="org.gricsan.dungaran.modules.mainmenu.ui.MainMenuScreen"
         android:label="fragment_main_menu_screen"
-        tools:layout="@layout/fragment_main_menu_screen" />
+        tools:layout="@layout/fragment_main_menu_screen">
+
+        <action
+            android:id="@+id/action_main_menu_screen_to_character_creation_screen"
+            app:destination="@id/character_creation_screen" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/character_creation_screen"
+        android:name="org.gricsan.dungaran.modules.charactercreation.ui.CharacterCreationScreen"
+        android:label="fragment_character_creation_screen"
+        tools:layout="@layout/fragment_character_creation_screen" />
 
 </navigation>
