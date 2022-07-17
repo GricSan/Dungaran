@@ -6,6 +6,20 @@
     style="@style/ScreenRootContainer"
     tools:context=".modules.charactercreation.ui.CharacterCreationScreen">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_lside_end"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_rside_start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+
     <TextView
         android:id="@+id/tv_title"
         style="@style/ScreenTitleCard"
@@ -18,13 +32,15 @@
         android:id="@+id/op_hairstyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="@dimen/application_screen_title_bottom_margin"
+        android:layout_marginEnd="4dp"
         android:background="@drawable/bg_application_card_element"
         android:elevation="@dimen/application_card_element_elevation"
+        android:padding="@dimen/application_card_element_padding"
         app:layout_constraintBottom_toTopOf="@id/op_hair_color"
-        app:layout_constraintEnd_toStartOf="@id/v_character_model_preview"
+        app:layout_constraintEnd_toStartOf="@id/guide_lside_end"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/v_character_model_preview"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
         app:layout_constraintVertical_chainStyle="spread_inside"
         app:option_title_text="Hairstyle" />
 
@@ -32,11 +48,12 @@
         android:id="@+id/op_hair_color"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="4dp"
         android:background="@drawable/bg_application_card_element"
         android:elevation="@dimen/application_card_element_elevation"
+        android:padding="@dimen/application_card_element_padding"
         app:layout_constraintBottom_toTopOf="@id/op_eye_color"
-        app:layout_constraintEnd_toStartOf="@id/v_character_model_preview"
+        app:layout_constraintEnd_toStartOf="@id/guide_lside_end"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/op_hairstyle"
         app:option_title_text="Hair color" />
@@ -45,11 +62,12 @@
         android:id="@+id/op_eye_color"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="4dp"
         android:background="@drawable/bg_application_card_element"
         android:elevation="@dimen/application_card_element_elevation"
+        android:padding="@dimen/application_card_element_padding"
         app:layout_constraintBottom_toTopOf="@id/op_facial_features"
-        app:layout_constraintEnd_toStartOf="@id/v_character_model_preview"
+        app:layout_constraintEnd_toStartOf="@id/guide_lside_end"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/op_hair_color"
         app:option_title_text="Eye color" />
@@ -58,11 +76,12 @@
         android:id="@+id/op_facial_features"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="4dp"
         android:background="@drawable/bg_application_card_element"
         android:elevation="@dimen/application_card_element_elevation"
+        android:padding="@dimen/application_card_element_padding"
         app:layout_constraintBottom_toBottomOf="@id/v_character_model_preview"
-        app:layout_constraintEnd_toStartOf="@id/v_character_model_preview"
+        app:layout_constraintEnd_toStartOf="@id/guide_lside_end"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/op_eye_color"
         app:option_title_text="Facial features" />
@@ -71,26 +90,27 @@
         android:id="@+id/v_character_model_preview"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/application_screen_container_padding"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="@dimen/application_screen_title_bottom_margin"
+        android:layout_marginEnd="4dp"
         android:background="@drawable/bg_application_card_element"
         android:elevation="@dimen/application_card_element_elevation"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title"
-        app:layout_constraintWidth_percent="0.375" />
+        app:layout_constraintEnd_toStartOf="@id/guide_rside_start"
+        app:layout_constraintStart_toEndOf="@id/guide_lside_end"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
     <View
         android:id="@+id/v_character_class_lore"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="@dimen/application_screen_container_padding"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="@dimen/application_screen_title_bottom_margin"
         android:background="@drawable/bg_application_card_element"
         android:elevation="@dimen/application_card_element_elevation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/v_character_model_preview"
+        app:layout_constraintStart_toEndOf="@id/guide_rside_start"
         app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
